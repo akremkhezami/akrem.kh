@@ -1,0 +1,81 @@
+<div class="container">
+<form class="middle">
+    <div class="form-group row">
+      <label for="input1" class="col-sm-2">Team 1</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="inputEmail3" placeholder="Team1">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="input2" class="col-sm-2">Team 2</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="team2" placeholder="Team2">
+      </div>
+    </div>
+    <div class="dropdown middle">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        Choose competition
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item">LTCR</a>
+        <a class="dropdown-item">Junior</a>
+        <a class="dropdown-item">SUMO</a>
+      </div>
+    </div>
+  
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <button type="submit" class="btn btn-danger middle">Create game</button>
+      </div>
+    </div>
+  </form>
+ 
+    <div class="main-content">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card" style="background-color: transparent;">
+            <div class="card-header" style="text-align: center">
+              <h4 class="card-title" style="color: black">
+                <b>Existing Teams</b>
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="text-primary">
+                    <th>
+                      ID
+                    </th>
+                    <th>
+                      Team name
+                    </th>
+                    <th>
+                      University
+                    </th>
+                    <th>
+                      Competition
+                    </th>
+                    
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let game of games" style="color: black" >
+                      <td>{{ game.id }}</td>
+                      <td>{{ game.teamname }}</td>
+                      <td>{{ game.university }}</td>
+                      <td>{{ game.competition }}</td>
+                      <td style="width:250px"><button class="btn btn-danger" >Delete</button>
+                        &nbsp;&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+

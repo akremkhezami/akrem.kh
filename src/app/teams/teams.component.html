@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-8">
+    <form class="form-center">
+        <div class="form-group">
+          <label for="team" style="color: black">&nbsp;&nbsp;&nbsp;Team name<br><br></label>
+          <input  [(ngModel)] = "name" name= "name" class="form-control" id="team" aria-describedby="Help" placeholder="Type Team's name">
+        </div><br>
+        <div class="form-group" *ngIf="router.url !== '/juniorteam'">
+          <label for="exampleInput" style="color: black">&nbsp;&nbsp;&nbsp;University<br><br></label>
+          <input  [(ngModel)] = "university" name= "university" class="form-control" id="exampleInput" placeholder="Type University's name">
+        </div><br>
+        <div class="form-group" *ngIf="router.url !== '/juniorteam'">
+            <label style="color: black">&nbsp;&nbsp;&nbsp;Upload Logo<br><br></label>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-default btn-file">
+                        Browse… <input type="file" id="imgInp">
+                    </span>
+                </span>
+                <input type="text" class="form-control transparent" readonly>
+            </div>
+            <img id='img-upload'/>
+        </div>
+        &nbsp;&nbsp;<button type="submit" class="btn" (click)= "add(name,university)">Add team</button>
+      </form>
+    </div>
+</div>
+</div>

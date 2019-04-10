@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="main-content">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card" style="background-color: transparent;">
+          <div class="card-header" style="text-align: center">
+            <h4 class="card-title" style="color: black">
+              <b>Existing Teams</b>
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="text-primary">
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                    Name
+                  </th>
+                  <th *ngIf="router.url !== '/juniorteam'">
+                    University
+                  </th>
+                  
+                </thead>
+                <tbody>
+                  <tr *ngFor="let team of teams" style="color: black" >
+                    <td>{{ team.id }}</td>
+                    <td>{{ team.name }}</td>
+                    <td *ngIf="router.url !== '/juniorteam'">{{ team.university }}</td>
+                    <td style="width:250px"><button class="btn btn-danger" (click)="delete(team.id)">Delete</button>
+                      &nbsp;&nbsp;<button class="btn btn-warning" (click)="update(team)">Update</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-bottom: 70px;
+    margin-top: 200px;
+}
+
+h2.textcenter {
+
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+div.middle{
+
+    margin-left: 250px;
+
+}
